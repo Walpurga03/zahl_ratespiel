@@ -17,7 +17,7 @@ fn main() {
     // Eine Endlosschleife, damit der Benutzer immer wieder raten kann, bis er gewinnt
     loop {
         // Drucke eine Nachricht, die den Benutzer auffordert, eine Zahl einzugeben
-        println!("Bitte gib deinen Tipp ein.");
+        println!("Bitte gib deinen Tipp ab.");
 
         // Erzeuge eine neue, leere String-Variable, um die Benutzereingabe zu speichern
         let mut guess = String::new();
@@ -40,11 +40,11 @@ fn main() {
 
         // Vergleiche die geratene Zahl (`guess`) mit der geheimen Zahl (`secret_number`)
         match guess.cmp(&secret_number) {
-            // Falls die geratene Zahl kleiner ist, drucke "Too small!" auf die Konsole
+            // Falls die geratene Zahl kleiner ist, drucke "Zu klein!" auf die Konsole
             Ordering::Less => println!("Zu klein!"),
-            // Falls die geratene Zahl größer ist, drucke "Too big!" auf die Konsole
+            // Falls die geratene Zahl größer ist, drucke "Zu groß!" auf die Konsole
             Ordering::Greater => println!("Zu groß!"),
-            // Falls die geratene Zahl gleich ist, drucke "You win!" auf die Konsole und beende die Schleife
+            // Falls die geratene Zahl gleich ist, drucke "Du hast gewonnen!" auf die Konsole und beende die Schleife
             Ordering::Equal => {
                 println!("Du hast gewonnen!");
                 break; // Beende die Schleife, da der Benutzer die Zahl richtig geraten hat
